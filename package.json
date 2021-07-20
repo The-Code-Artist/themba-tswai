@@ -1,0 +1,33 @@
+{
+  "name": "themba-tswai",
+  "version": "1.0.0",
+  "description": "The venerable Creative Director: Themba Leon Tswai's official website.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Code-Artist/themba-tswai.git"
+  },
+  "keywords": [
+    "node",
+    "node-js",
+    "ejs",
+    "javascript"
+  ],
+  "author": "Marothi Mahlake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Code-Artist/themba-tswai/issues"
+  },
+  "homepage": "https://github.com/The-Code-Artist/themba-tswai#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.3",
+    "request": "^2.88.2"
+  }
+}
