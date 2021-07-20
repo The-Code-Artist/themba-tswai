@@ -13,7 +13,7 @@
     />
     <meta content="Marothi Mahlake" name="author" />
     <meta
-      content="The venerable Creative Director: Themba Leon Tswai's official website."
+      content="The venerable Creative Director: Themba Tswai's official website. Pusha iPassion! Themba is the epitome of Kasi expression from Kagiso in the South of Krugersdorp."
       name="description"
     />
     <link rel="stylesheet" href="font-awesome/css/all.min.css" />
@@ -29,8 +29,16 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <script src="https://www.google.com/recaptcha/api.js?render=6LeBeN0ZAAAAAIpw4ooGeFNqB3gd58f_zLwqrKTR"></script>
 
@@ -41,25 +49,41 @@
         }
       }
 
-      @media screen and (max-width:768px) {
-        .bullet-item, .nav-bullet {
-          display: none!important;
+      @media screen and (max-width: 767px) {
+        .bullet-item,
+        .nav-bullet {
+          display: none !important;
+        }
+
+        .ParallaxVideo {
+        display: none;
+      }
+
+        #tswai-banner {
+          border: 0 !important;
+          border-right: 0;
         }
       }
 
-      #logo {
-        display: block;
-        height: 76vh;
-        margin: 1em;
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: contain;
+      #tswai-banner {
+        border-right: 2px solid #7b6054;
+      }
+
+      .ParallaxVideo {
+        height: 50vh;
+        padding-bottom: 50px;
+        padding-top: 50px;
+      }
+      .ParallaxVideo video {
         width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: -1;
       }
 
       footer a,
       footer a:visited {
-        color: #FFF;
+        color: #fff;
       }
 
       footer a:hover {
@@ -68,8 +92,28 @@
       }
       .nav-bullet .navbar-text {
         font-weight: bolder;
-        font-size: 25pt!important;
+        font-size: 25pt !important;
         top: -0.3rem;
+      }
+
+      @media (min-aspect-ratio: 16/9) {
+        #hero {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (max-aspect-ratio: 16/9) {
+        #hero {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      #hero video {
+        position: fixed;
+        height: auto;
+        width: 100%;
       }
     </style>
   </head>
@@ -91,7 +135,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">
+          <a
+            class="navbar-brand"
+            href="https://www.behance.net/thembatswai"
+            target="_blank"
+            title="Themba Tswai on Behance"
+          >
             <img
               src="img/Brand.png"
               alt="Themba Tswai Portfolio"
@@ -103,31 +152,64 @@
         <div class="collapse navbar-collapse" id="navigation-example">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="https://www.linkedin.com/in/themba-tswai" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+              <a
+                href="https://www.linkedin.com/in/themba-tswai"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LINKEDIN</a
+              >
             </li>
             <li class="bullet-item">
-              <a class="nav-bullet navbartext" href="javascript:void()">&bull;</a>
+              <a class="nav-bullet navbartext" href="javascript:void()"
+                >&bull;</a
+              >
             </li>
             <li>
-              <a href="https://instagram.com/themba_tswai" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+              <a
+                href="https://instagram.com/themba_tswai"
+                target="_blank"
+                rel="noopener noreferrer"
+                >INSTAGRAM</a
+              >
             </li>
             <li class="bullet-item">
-              <a class="nav-bullet navbartext" href="javascript:void()">&bull;</a>
+              <a class="nav-bullet navbartext" href="javascript:void()"
+                >&bull;</a
+              >
             </li>
             <li>
-              <a href="https://twitter.com/themba_tswai" target="_blank" rel="noopener noreferrer">TWITTER</a>
+              <a
+                href="https://twitter.com/themba_tswai"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TWITTER</a
+              >
             </li>
             <li class="bullet-item">
-              <a class="nav-bullet navbartext" href="javascript:void()">&bull;</a>
+              <a class="nav-bullet navbartext" href="javascript:void()"
+                >&bull;</a
+              >
             </li>
             <li>
-              <a href="https://www.youtube.com/channel/UCuFpMs-f1CSOxs1_IoCedjQ" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+              <a
+                href="https://www.youtube.com/channel/UCuFpMs-f1CSOxs1_IoCedjQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YOUTUBE</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- end navbar -->
+
+    <!-- Banner Video -->
+    <div class="ParallaxVideo">
+      <video autoplay muted loop>
+        <source src="/videos/Banner.mp4" type="video/mp4" />
+      </video>
+    </div>
 
     <div class="wrapper">
       <!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
@@ -139,6 +221,7 @@
           <!-- here you can add your content -->
           <div class="row" style="height: 100%">
             <div
+              id="tswai-banner"
               class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
               style="height: 100%"
             >
@@ -154,7 +237,11 @@
                   margin: 1em 0;
                 "
               >
-                <a href="https://www.behance.net/thembatswai" target="_blank" title="Themba Tswai on Behance">
+                <a
+                  href="https://www.behance.net/thembatswai"
+                  target="_blank"
+                  title="Themba Tswai on Behance"
+                >
                   <img
                     class="img-responsive"
                     id="logo"
@@ -173,6 +260,7 @@
                   class="form-horizontal"
                   method="post"
                 >
+                  <h3 style="color: #58463e">GET A QUOTE</h3>
                   <!-- Name Field -->
                   <div class="form-group">
                     <input
@@ -199,9 +287,12 @@
 
                   <!-- Enquiry Field -->
 
-                  <p style="font-size: 8.5pt;color: #5c4b44;;"><strong style="color: #5c4b44;">WHAT WOULD YOU LIKE ME TO HELP YOU WITH?</strong></p>
+                  <p style="font-size: 8.5pt; color: #5c4b44">
+                    <strong style="color: #5c4b44"
+                      >WHAT WOULD YOU LIKE ME TO HELP YOU WITH?</strong
+                    >
+                  </p>
                   <div class="form-group">
-
                     <div class="radio">
                       <label>
                         <input
@@ -354,19 +445,27 @@
           </div>
         </div>
       </div>
-    </div>
 
     <!-- Footer -->
     <footer
-      class="footer"
-      style="background-color: #7B6054; width: 100%; color: #DDD2CC"
+      style="background-color: #7b6054; width: 100%; color: #ddd2cc; z-index: 3!important;"
     >
       <div class="container">
         <div class="copyright text-center">
-          <a href="http://msdc.africa" target="_blank" rel="noopener noreferrer"><strong>&copy; MSDC Inc (Pty) Ltd <script>document.write(new Date().getFullYear())</script> |</strong></a> All rights reserved.
+          <a href="http://msdc.africa" target="_blank" rel="noopener noreferrer"
+            ><strong
+              >&copy; MSDC Inc (Pty) Ltd
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              |</strong
+            ></a
+          >
+          All rights reserved.
         </div>
       </div>
     </footer>
+    </div>
 
     <!--   Core JS Files   -->
     <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -408,12 +507,11 @@
           validateName();
           validateEmail();
           validateMessage();
-          
+
           if (isValid) {
             $("#loader").fadeIn();
             runCaptcha();
           }
-          
         }
 
         function runCaptcha() {
