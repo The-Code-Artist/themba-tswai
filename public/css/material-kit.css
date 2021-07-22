@@ -1207,8 +1207,8 @@ output {
 }
 
 .form-control {
-  height: 36px;
-  padding: 7px 0;
+  height: 30px;
+  padding: 4px;
   font-size: 14px;
   line-height: 1.42857;
   border: 2px solid #7B6054;
@@ -1219,7 +1219,7 @@ output {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 36px;
+    line-height: 32px;
   }
   input[type="date"].input-sm, .input-group-sm input[type="date"],
   input[type="time"].input-sm, .input-group-sm
@@ -1559,8 +1559,8 @@ label.control-label {
 }
 
 .form-group {
-  padding-bottom: 7px;
-  margin: 27px 0 0 0;
+  padding-bottom: 4px;
+  margin: 22px 0 0 0;
 }
 .form-group .form-control {
   margin-bottom: 7px;

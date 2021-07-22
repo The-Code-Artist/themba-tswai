@@ -52,14 +52,28 @@ He believes that “if you put your mind to something you will succeed.”"
         }
       }
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 767.99px) {
         .bullet-item,
         .nav-bullet {
           display: none !important;
         }
 
         .ParallaxVideo {
-          display: none;
+          height: 70vh;
+          padding: 0;
+          margin: 0;
+        }
+
+        .ParallaxVideo video {
+          /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+          width: auto;
+          height: 100%;
+
+          object-fit: cover;
+
+          /* Center the video */
+          position: absolute;
+          z-index: -1;
         }
 
         #tswai-banner {
@@ -73,15 +87,19 @@ He believes that “if you put your mind to something you will succeed.”"
       }
 
       .ParallaxVideo {
-        height: 50vh;
-        padding-bottom: 50px;
-        padding-top: 50px;
+        height: 100vh;
       }
       .ParallaxVideo video {
-        width: 100%;
+        box-shadow: 0 2px 8px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 15px 0 rgba(153, 153, 153, 0.12);
+        object-fit: cover;
+        height: 100%;
+        width: auto;
         position: fixed;
         top: 0;
         z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
 
       footer a,
@@ -97,26 +115,6 @@ He believes that “if you put your mind to something you will succeed.”"
         font-weight: bolder;
         font-size: 25pt !important;
         top: -0.3rem;
-      }
-
-      @media (min-aspect-ratio: 16/9) {
-        #hero {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      @media (max-aspect-ratio: 16/9) {
-        #hero {
-          width: 100%;
-          height: auto;
-        }
-      }
-
-      #hero video {
-        position: fixed;
-        height: auto;
-        width: 100%;
       }
     </style>
   </head>
@@ -226,37 +224,26 @@ He believes that “if you put your mind to something you will succeed.”"
             <div
               id="tswai-banner"
               class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
-              style="height: 100%"
+              style="height: 100%; margin: 0"
             >
-              <div class="clearfix"></div>
-
               <!-- Logo Large -->
-              <div
-                class="col-md-8 col-md-offset-1 text-center"
-                style="
-                  height: 90vh;
-                  width: 100%;
-                  white-space: nowrap;
-                  margin: 1em 0;
-                "
+              <a
+                href="https://www.behance.net/thembatswai"
+                target="_blank"
+                title="Themba Tswai on Behance"
               >
-                <a
-                  href="https://www.behance.net/thembatswai"
-                  target="_blank"
-                  title="Themba Tswai on Behance"
-                >
-                  <img
-                    class="img-responsive"
-                    id="logo"
-                    src="/img/T-Tswai-Web-Banner.png"
-                    alt="HPC Logo"
-                  />
-                </a>
-              </div>
+                <img
+                  class="img-responsive"
+                  id="logo"
+                  src="/img/T-Tswai-Web-Banner.png"
+                  alt="HPC Logo"
+                  style="margin-left: auto; margin-right: auto; padding: 5rem"
+                />
+              </a>
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="col-md-offset-2 col-md-8">
+              <div class="col-md-offset-1 col-md-11">
                 <form
                   id="contact-form"
                   action="."
@@ -354,7 +341,7 @@ He believes that “if you put your mind to something you will succeed.”"
                       class="form-control"
                       placeholder="WRITE THE MESSAGE IN HERE"
                       id="message"
-                      rows="14"
+                      rows="7"
                     ></textarea>
                     <span id="message-error" class="text-danger"></span>
                   </div>
